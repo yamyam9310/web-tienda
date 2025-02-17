@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tienda</title>
+    <link rel ="stylesheet"href=style.css>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <nav>
+            <a href="#Nosotros" id="menu-nosotros" onclick="mostrarSeccion('nosotros')">Nosotros</a>
+            <a href="#Productos" id="menu-stock" onclick="mostrarSeccion('stock')">Stock</a>
+            <a href="#Contacto" id="menu-contacto" onclick="mostrarSeccion('contacto')">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<section id="Productos" class="home">
+    <div class="contenedor">
+        <div class="products">
+          <h2>Productos</h2>
+          <div class="product">
+            <img src="imagen/camison flores.png" alt="Producto A">
+            <span>camison flores - $10</span>
+            <button onclick="agregarAlCarrito('Producto A', 10)">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="imagen/camison rosa.png" alt="Producto B">
+            <span>Camison rosa - $15</span>
+            <button onclick="agregarAlCarrito('Producto B', 15)">Agregar</button>
+          </div>
+          <div class="product">
+            <img src="imagen/Ropa-de-fiesta-H&M-para-niños.jpg" alt="Producto c">
+            <span>Producto C - $20</span>
+            <button onclick="agregarAlCarrito('Producto C', 20)">Agregar</button>
+          </div>
+        </div>
+
+        <button id="cart-button">🛒</button>
+
+        <!-- Contenedor del carrito (inicialmente oculto) -->
+        <div id="cart-container" class="hidden">
+            <h2>Carrito</h2>
+            <div id="cart-items"></div>
+            <button class="vaciar-car" onclick="vaciarCarrito()">Vaciar carrito</button>
+            <button class="whatsapp-btn" onclick="enviarWhatsApp()">Enviar a WhatsApp 📲</button>
+            <div class="total" id="cart-total">Total: $0</div>
+        </div>
+</section>
+      <section id="Nosotros" class="home">
+        <div class="carousel"> 
+          <div class="carousel-images"> 
+            <img src="imagen/clothes.jpg" alt="Imagen 1"> 
+            <img src="imagen/clothes2.jpg" alt="Imagen 2"> 
+            <img src="imagen/clothes3.jpg" alt="Imagen 3"> 
+          </div>
+           <button class="carousel-button prev">&#10094;</button>
+           <button class="carousel-button next">&#10095;</button> </div>
+    </section>
+    <section id="Contacto" class="home">
+    <footer>
+      <div class="social-media">
+          <a href="https://www.tiktok.com/@yamyyamy3109"><img src="tiktok.png" alt="tiktok"></a>
+          <a href="https://www.instagram.com/pinkupcosmetics.cr/?hl=es"><img src="imagen/Instagram.png" alt="Instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=50662400854"><img src="imagen/WhatsApp.png" alt="WhatsApp"></a>
+      </div>
+      <p>&copy; 2024 Pink Up Cosmetics Costa Rica</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.866367973022!2d-103.35784352554212!3d20.67501497695283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428b1fcfce6a9af%3A0x74ca2e328c47ab39!2sParque%20Revoluci%C3%B3n!5e0!3m2!1ses!2smx!4v1738187537737!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </footer>
+    </section>
+
+    <script src="script.js"></script>  
+
+</body>
+
+</html>
